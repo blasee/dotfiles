@@ -10,8 +10,7 @@ if [ ! -f "${badwolf_file}" ]; then
     wget -O ${badwolf_file} https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
 fi
 
-echo "Creating symlinks...\n"
+echo "Creating symlinks..."
 
-echo "- vimrc\n"
 ln -fs ${dotfiles}/.vimrc ${HOME}
-
+ln -fs ${dotfiles}/.tmux.conf ${HOME}
