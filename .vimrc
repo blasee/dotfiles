@@ -7,6 +7,7 @@ set termguicolors
 " }}}
 " Misc {{{
 set clipboard=unnamed
+set modeline
 " }}}
 " Spaces & Tabs {{{
 set tabstop=4           " 4 space tab
