@@ -17,6 +17,7 @@ set shiftwidth=4
 filetype indent on
 filetype plugin on
 set autoindent
+set backspace=indent,eol,start
 " }}}
 " UI Layout {{{
 set number              " show line numbers
