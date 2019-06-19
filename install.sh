@@ -1,14 +1,14 @@
 #!/usr/bin/env bash
 
 dotfiles="${HOME}/.dotfiles"
-badwolf_file="${HOME}/.vim/colors/badwolf.vim"
+solarized_file="${HOME}/.vim/colors/solarized.vim"
 
 mkdir -p ${HOME}/.vim/colors
 mkdir -p ${HOME}/.ssh
 
-if [ ! -f "${badwolf_file}" ]; then
-    echo "Downloading badwolf color scheme"
-    wget -O ${badwolf_file} https://raw.githubusercontent.com/sjl/badwolf/master/colors/badwolf.vim
+if [ ! -f "${solarized_file}" ]; then
+    echo "Downloading color scheme"
+    wget -O ${solarized_file} https://raw.githubusercontent.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 fi
 
 echo "Creating symlinks..."
