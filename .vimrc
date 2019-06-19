@@ -2,8 +2,8 @@
 
 " Colors {{{
 syntax enable           " enable syntax processing
-colorscheme badwolf
-set termguicolors
+set background=dark
+colorscheme solarized
 " }}}
 " Misc {{{
 set clipboard=unnamed
