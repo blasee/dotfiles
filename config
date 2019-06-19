@@ -1,0 +1,16 @@
+Host pearcey-i2
+    HostName pearcey-i2.hpc.csiro.au
+    Port 22
+    User see044
+    LocalForward 8080 localhost:8080
+    IdentityFile ~/.ssh/id_rsa
+
+Host oa-12-cdc
+    Hostname OA-12-CDC.it.csiro.au
+    Port 22
+    User see044
+
+Host ruby
+   Hostname ruby.hpc.csiro.au
+   Port 22
+   User see044

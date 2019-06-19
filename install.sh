@@ -4,6 +4,7 @@ dotfiles="${HOME}/.dotfiles"
 badwolf_file="${HOME}/.vim/colors/badwolf.vim"
 
 mkdir -p ${HOME}/.vim/colors
+mkdir -p ${HOME}/.ssh
 
 if [ ! -f "${badwolf_file}" ]; then
     echo "Downloading badwolf color scheme"
@@ -14,3 +15,4 @@ echo "Creating symlinks..."
 
 ln -fs ${dotfiles}/.vimrc ${HOME}
 ln -fs ${dotfiles}/.tmux.conf ${HOME}
+ln -fs ${dotfiles}/config ${HOME}/.ssh/
