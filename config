@@ -11,6 +11,11 @@ Host oa-12-cdc
     User see044
 
 Host ruby
-   Hostname ruby.hpc.csiro.au
-   Port 22
-   User see044
+    Hostname ruby.hpc.csiro.au
+    Port 22
+    User see044
+
+Host raijin
+    Hostname raijin.nci.org.au
+    Port 22
+    User bs9438
