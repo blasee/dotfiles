@@ -1,4 +1,5 @@
 " Blake Seers
+" [spacebar] to fold and unfold sections
 
 " Vundle and plugins {{{
 set nocompatible
@@ -12,17 +13,24 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Add plugins here...
-Plugin 'tmhedberg/SimpylFold'
+" Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
+" Bundle 'Valloric/YouCompleteMe'
+" Plugin 'vim-syntastic/syntastic'
+" Plugin 'nvie/vim-flake8'
+" Plugin 'Zenburn'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Plugin 'scrooloose/nerdtree'
+" Plugin 'jistr/vim-nerdtree-tabs'
+" Plugin 'tpope/vim-fugitive'
+" Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+
+Plugin 'vim-airline/vim-airline'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+Plugin 'vim-airline/vim-airline-themes'
+:let g:airline_solarized_bg='dark'
 
 " All plugins must be added before these lines
 call vundle#end()
@@ -36,15 +44,15 @@ nnoremap <leader><space> :noh<CR>
 " }}}
 " Colors {{{
 syntax enable           " enable syntax processing
+set background=dark
+colorscheme solarized
+
 let g:solarized_termcolors=256
 let python_highlight_all=1
-"let g:solarized_termtrans=1
-if has('gui_running')
-      set background=dark
-        colorscheme solarized
-    else
-          colorscheme zenburn
-      endif
+let g:solarized_termtrans=1
+
+" Toggle background colour
+call togglebg#map("<F5>")
 " }}}
 " Misc {{{
 set clipboard=unnamed
@@ -72,7 +80,9 @@ set showmatch           " higlight matching parenthesis
 " Searching {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
-set hlsearch            " highlight all matches
+
+" Clever completion with the :find command
+set path+=**
 " }}}
 " Folding {{{
 set foldmethod=indent   " fold based on indent level
@@ -82,9 +92,10 @@ set foldenable          " don't fold files by default on open
 nnoremap <space> za
 " See docstrings for folded code
 let g:SimplyFold_docstring_preview=1
+
+" Add newlines with Ctrl-j and Ctrl-k
+nnoremap <C-j> o<ESC>k
+nnoremap <C-k> O<ESC>j
 " }}}
-" Plugin customizations {{{
-let g:ycm_autoclose_preview_window_after_completion=1
-map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
-" }}}
+
 " vim:foldmethod=marker:foldlevel=0
