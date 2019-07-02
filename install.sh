@@ -23,7 +23,4 @@ for file in ${files}; do
     ln -sf ${dotfiles}/.${file} ${HOME}/.${file}
 done
 
-ln -fs ${dotfiles}/config ${HOME}/.ssh/
-
-# Download Git Auto-completion
-curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ${HOME}/.git-completion.bash
+ln -sf ${dotfiles}/config ${HOME}/.ssh/
