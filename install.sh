@@ -16,7 +16,7 @@ echo "Changing to the ${dotfiles} directory"
 cd ${dotfiles}
 echo "...done"
 
-files="bash_profile bashrc bash_prompt aliases vimrc"
+files="bash_profile bashrc bash_prompt aliases vimrc tmux.conf"
 
 for file in ${files}; do
     echo "Creating symlinks..."
