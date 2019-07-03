@@ -77,6 +77,18 @@ set wildmenu
 set lazyredraw
 set showmatch           " higlight matching parenthesis
 " }}}
+" Tabs, panes and splits {{{
+" Use more natural splits
+set splitbelow
+set splitright
+
+" Navigate using Ctrl-navigation keys
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" }}}
 " Searching {{{
 set ignorecase          " ignore case when searching
 set incsearch           " search as characters are entered
@@ -92,13 +104,13 @@ set foldenable          " don't fold files by default on open
 nnoremap <space> za
 " See docstrings for folded code
 let g:SimplyFold_docstring_preview=1
-
-" Add newlines with Ctrl-j and Ctrl-k
-nnoremap <C-j> o<ESC>k
-nnoremap <C-k> O<ESC>j
 " }}}
 " Automatic brackets {{{
 inoremap ( ()<Esc>i
 inoremap { {<cr>}<Esc>k$o
+" }}}
+" Python-specific mappings {{{
+autocmd FileType python inoremap """ """<cr>"""<Esc>ko
+" }}}
 
 " vim:foldmethod=marker:foldlevel=0
