@@ -97,5 +97,8 @@ let g:SimplyFold_docstring_preview=1
 nnoremap <C-j> o<ESC>k
 nnoremap <C-k> O<ESC>j
 " }}}
+" Automatic brackets {{{
+inoremap ( ()<Esc>i
+inoremap { {<cr>}<Esc>k$o
 
 " vim:foldmethod=marker:foldlevel=0
