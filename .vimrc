@@ -108,12 +108,9 @@ nnoremap <space> za
 " See docstrings for folded code
 let g:SimplyFold_docstring_preview=1
 " }}}
-" Automatic brackets {{{
-inoremap ( ()<Esc>i
-inoremap { {<cr>}<Esc>k$o
-" }}}
 " Python-specific mappings {{{
 autocmd FileType python inoremap """ """<cr>"""<Esc>ko
+autocmd FileType python nnoremap <buffer> <F9> :exec '! clear; python3' shellescape(@%, 1)<cr>
 " }}}
 
 " vim:foldmethod=marker:foldlevel=0
