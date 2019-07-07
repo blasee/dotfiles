@@ -25,6 +25,9 @@ Plugin 'altercation/vim-colors-solarized'
 " Plugin 'tpope/vim-fugitive'
 " Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 
+Plugin 'tpope/vim-surround'
+
+
 Plugin 'vim-airline/vim-airline'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
@@ -70,12 +73,12 @@ set autoindent
 set backspace=indent,eol,start
 " }}}
 " UI Layout {{{
-set number              " show line numbers
-set showcmd             " show command in bottom bar
-set cursorline        " highlight current line
+set number relativenumber " show relative line numbers
+set showcmd               " show command in bottom bar
+set cursorline            " highlight current line
 set wildmenu
 set lazyredraw
-set showmatch           " higlight matching parenthesis
+set showmatch             " higlight matching parenthesis
 " }}}
 " Tabs, panes and splits {{{
 " Use more natural splits
