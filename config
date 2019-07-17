@@ -19,3 +19,8 @@ Host raijin
     Hostname raijin.nci.org.au
     Port 22
     User bs9438
+
+Host roamsurf
+    Hostname roamsurf.it.csiro.au
+    Port 22
+    User see044
